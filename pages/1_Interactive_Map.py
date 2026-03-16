@@ -17,11 +17,36 @@ col1, col2 = st.columns([4, 1])
 options = list(leafmap.basemaps.keys())
 index = options.index("OpenTopoMap")
 
+# PDOK datasets
+pdok_datasets = {
+    "PDOK Luchtfoto RGB": {
+        "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?",
+        "layers": "Actueel_orthoHR",
+    },
+    "PDOK BGT Achtergrondkaart": {
+        "url": "https://service.pdok.nl/brt/achtergrondkaart/wmts/v2_0?",
+        "layer": "standaard",
+        "type": "wmts",
+    },
+    "PDOK Kadastrale Kaart": {
+        "url": "https://service.pdok.nl/kadaster/kadastralekaart/wms/v5_0?",
+        "layers": "perceel",
+    },
+    "PDOK Bestuurlijke Grenzen": {
+        "url": "https://service.pdok.nl/kadaster/bestuurlijkegebieden/wms/v1_0?",
+        "layers": "Gemeentegebied",
+    },
+}
+
+
 with col2:
 
     basemap = st.selectbox("Select a basemap:", options, index)
 
-
+    selected_dataset = st.multiselect("Select PDOK datasets:", 
+                                      list(pdok_datasets.keys()),
+                                      default=["PDOK Luchtfoto RGB"])
+                                      
 with col1:
 
     m = leafmap.Map(
