@@ -26,9 +26,9 @@ pdok_datasets = {
         "url": "https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?",
         "layers": "Actueel_orthoHR",
     },
-    "Kadastralekaart": {
-        "url": "https://service.pdok.nl/kadaster/kadastralekaart/wms/v5_0?",
-        "layers": "perceel",
+    "Landuse": {
+        "url": "https://service.pdok.nl/cbs/bestand-bodemgebruik-2017/wms/v1_0?request=getCapabilities&service=WMS",
+        "layers": "Landuse",
     },
     "Bestuurlijke Grenzen": {
         "url": "https://service.pdok.nl/kadaster/bestuurlijkegebieden/wms/v1_0?",
