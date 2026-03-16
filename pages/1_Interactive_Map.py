@@ -38,8 +38,7 @@ pdok_datasets = {
 
 selected_datasets = st.sidebar.multiselect(
     "Select PDOK datasets:",
-    list(pdok_datasets.keys()),
-    default=["PDOK Luchtfoto RGB"]
+    list(pdok_datasets.keys())
 )
 
 # Create map
