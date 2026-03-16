@@ -5,8 +5,7 @@ st.set_page_config(layout="wide")
 
 # Customize the sidebar
 markdown = """
-A Streamlit map template
-<https://github.com/opengeos/streamlit-map-template>
+This dashboard is created for visualising indicators identified in NarcoIntel project
 """
 
 st.sidebar.title("About")
@@ -33,4 +32,4 @@ st.markdown(markdown)
 
 m = leafmap.Map(minimap_control=True)
 m.add_basemap("OpenTopoMap")
-m.to_streamlit(height=100)
+m.to_streamlit(height=500)
