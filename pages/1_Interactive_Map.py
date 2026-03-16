@@ -59,16 +59,16 @@ with col1:
     )
     m.add_basemap(basemap)
 
-    # PDOK luchtfoto RGB WMS
-    # m.add_wms_layer(
-    #     url="https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?",
-    #     layers="Actueel_orthoHR",
-    #     name="PDOK Luchtfoto RGB",
-    #     attribution="PDOK",
-    #     transparent=True,
-    #     format="image/png",
-    # )
+    PDOK luchtfoto RGB WMS
+    m.add_wms_layer(
+        url="https://service.pdok.nl/hwh/luchtfotorgb/wms/v1_0?",
+        layers="Actueel_orthoHR",
+        name="PDOK Luchtfoto RGB",
+        attribution="PDOK",
+        transparent=True,
+        format="image/png",
+    )
 
     # Optional layer control
     m.add_layer_control()    
-    m.to_streamlit(height=700)
+    m.to_streamlit(height=700, width=1400)
